@@ -1,0 +1,11 @@
+# Compiled binaries
+*.bin
+
+# Build output directory (manual builds)
+build/
+
+# CPH extension binary cache
+.cph/*.bin
+
+# macOS
+.DS_Store
