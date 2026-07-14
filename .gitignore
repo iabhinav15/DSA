@@ -6,6 +6,7 @@ build/
 
 # CPH extension binary cache
 .cph/*.bin
+.cph/*.prob
 
 # macOS
 .DS_Store
