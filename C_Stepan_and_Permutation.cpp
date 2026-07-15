@@ -4,22 +4,26 @@ using namespace std;
 #define ll long long
 const int mod = 1e9 + 7;
 
+int __gcd(int a, int b) {
+    if(b == 0) return a;
+    return __gcd(b, a % b);
+}
+
 void solve()
 {
     int n, x, y; cin>>n>>x>>y;
     bool isOk = true;
+    int gcd = __gcd(x, y);
 
     for (int i = 1; i <= n; i++)
     {
         int el; cin>>el;
 
-        if(abs(i - el) % 2 == 0) {
-            if(x % 2 == 0 || y % 2 == 0) continue;
-            else isOk = false; 
+        if(abs(i - el) % gcd == 0) {
+            continue;
         }
-        else if(abs(i - el) % 2 != 0) {
-            if(x % 2 != 0 || y % 2 != 0) continue;
-            else isOk = false; 
+        else {
+            isOk = false;
         }
     }
 
